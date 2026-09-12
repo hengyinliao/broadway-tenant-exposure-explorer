@@ -1,0 +1,3 @@
+/* Station-area rings are reference graphics; clicks must reach parcels below. */
+.leaflet-overlay-pane path[fill-opacity="0.025"],
+.leaflet-overlay-pane path[stroke="#245c58"] { pointer-events: none; }
