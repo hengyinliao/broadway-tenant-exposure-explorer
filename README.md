@@ -50,8 +50,8 @@ Best LinkedIn view after clicking **Use available-data model**: all stations, 80
 
 See [methodology](docs/methodology.md), [data dictionary](docs/data_dictionary.md), and [limitations](docs/limitations.md).
 
-## Publish free with GitHub Pages
+## Publish with private source
 
-The repository includes `.github/workflows/deploy-pages.yml`. Push the project to a public GitHub repository on the `main` branch, then open **Settings → Pages** and select **GitHub Actions** as the source. Every later push runs the model tests, builds the production site and updates the public URL automatically.
+Keep this repository private and import it into Vercel. The included `vercel.json` runs the model tests, builds `frontend`, and publishes only `frontend/dist`. Raw downloads, analysis scripts, documentation source and Git history stay in the private repository.
 
-Only the browser-ready dataset in `frontend/public/data` is published. Raw source downloads and intermediate data are excluded from Git because they can be regenerated with `scripts/build_data.py`.
+The browser-ready JavaScript, CSS and GeoJSON are necessarily delivered to visitors and cannot be made secret in a static web application. Moving sensitive or proprietary calculations behind an authenticated server API would be required to conceal them.
